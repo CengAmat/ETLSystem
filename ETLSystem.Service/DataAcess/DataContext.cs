@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace ETLSystem.Service.Database
+namespace ETLSystem.Service.DataAccess
 {
     public partial class DataContext : DbContext
     {
@@ -15,23 +15,14 @@ namespace ETLSystem.Service.Database
         {
         }
 
-        public virtual DbSet<DataS1> DataS1 { get; set; }
-        public virtual DbSet<DataS2> DataS2 { get; set; }
+        public virtual DbSet<Building> Building { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<DataS1>(entity =>
+            modelBuilder.Entity<Building>(entity =>
             {
                 entity.HasKey(e => e.Id)
-                    .HasName("DataS1_pkey");
-
-                entity.Property(e => e.Id).ValueGeneratedNever();
-            });
-
-            modelBuilder.Entity<DataS2>(entity =>
-            {
-                entity.HasKey(e => e.Id)
-                    .HasName("DataS2_pkey");
+                    .HasName("Building_pkey");
 
                 entity.Property(e => e.Id).ValueGeneratedNever();
             });
