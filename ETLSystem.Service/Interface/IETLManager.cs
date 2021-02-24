@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
-using ETLSystem.Service.Database;
+using ETLSystem.Service.DataAccess;
 using Microsoft.EntityFrameworkCore;
 
 namespace ETLSystem.Service.Interface
@@ -8,8 +8,8 @@ namespace ETLSystem.Service.Interface
     public interface IETLManager
     {
         public Task ProcessAsync(string body, string group);
-        public Task<DataS1> GetDataByIdAsync(Guid Id);
-        public Task<int> CreateOrUpdateDataAsync(DataS1 updateData);
+        public Task<Building> GetDataByIdAsync(Guid Id);
+        public Task<int> CreateOrUpdateDataAsync(Building updateData);
         DbContextOptions<DataContext> Options();
     }
 }
