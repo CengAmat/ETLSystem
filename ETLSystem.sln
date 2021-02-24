@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.808.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETLSystem", "ETLSystem\ETLSystem.csproj", "{6E42C7E1-7BDC-4C87-903F-3468E88C73A8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETLSystem.Listener", "ETLSystem.Listener\ETLSystem.Listener.csproj", "{D68CA3F6-4EBE-47D0-AFCB-4D7F7434CCFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETLSystem.Service", "ETLSystem.Service\ETLSystem.Service.csproj", "{40F0BA22-ECA9-4714-AA38-1F13D175DC71}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6E42C7E1-7BDC-4C87-903F-3468E88C73A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6E42C7E1-7BDC-4C87-903F-3468E88C73A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6E42C7E1-7BDC-4C87-903F-3468E88C73A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6E42C7E1-7BDC-4C87-903F-3468E88C73A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D68CA3F6-4EBE-47D0-AFCB-4D7F7434CCFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D68CA3F6-4EBE-47D0-AFCB-4D7F7434CCFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D68CA3F6-4EBE-47D0-AFCB-4D7F7434CCFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D68CA3F6-4EBE-47D0-AFCB-4D7F7434CCFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40F0BA22-ECA9-4714-AA38-1F13D175DC71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40F0BA22-ECA9-4714-AA38-1F13D175DC71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40F0BA22-ECA9-4714-AA38-1F13D175DC71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40F0BA22-ECA9-4714-AA38-1F13D175DC71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

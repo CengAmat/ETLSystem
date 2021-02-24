@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ETLSystem
+namespace ETLSystem.Service
 {
     class Program
     {
