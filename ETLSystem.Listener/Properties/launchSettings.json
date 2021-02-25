@@ -1,0 +1,10 @@
+﻿{
+  "profiles": {
+    "ETLSystem.Listener": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

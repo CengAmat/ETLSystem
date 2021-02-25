@@ -42,8 +42,7 @@ namespace ETLSystem.Listener.Workers
         {
              try
              {
-                 var IsMessageGroup = message.Attributes.TryGetValue("MessageGroupId", out string messageGroup);
-                 await etlManager.ProcessAsync(message.Body, messageGroup);
+                 await etlManager.ProcessAsync(message.Body);
              }
              catch (Exception ex)
              {

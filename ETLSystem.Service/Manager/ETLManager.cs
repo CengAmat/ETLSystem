@@ -18,13 +18,51 @@ namespace ETLSystem.Service.Manager
             this.configManager = configManager;
         }
 
-        public async Task ProcessAsync(string body, string group)
+        public async Task ProcessAsync(string body)
         {
             // VALIDATE
 
-            // PROCESS
+            /* We should validate json data here
+             * 
+             * We should check if id is integer
+             * 
+             * We should check if this building record exists
+             */
+
+            // EXTRACT
+
+            /* Getting datas from S3 and put InMemory array!
+             * 
+             */
+
+            // rawJsonData { source: "D2", and other fields in jsondata }
+
+            // const { id, address1, address2, lat, lon, floorcount, floorarea, name, postcode, coordinates } = rawJsonData
+
+            // const validFields = {}; empty object for not to block old field value with new incorrect format field value
+
+            //if (id && typeof id === “number”) {
+            //    validField.id = id;
+            //}
+
+            //if (address && typeof address === “string”) {
+            //    validField.address = address;
+            //}
+
+            //if (floorarea && typeof floorarea === “number”) {
+            //    validField.floorarea = floorarea;
+            //} and so on ...
+
+            // We need internal id for store data as source independent id,
+            // or We should put prefix to Id such as s1_123 or s2_123 - making this for create internal unique id
+
+            // Also hash algorithms help us in this case.(for internal unique id). (like md5 and it is efficient)
+            // We can create hash data over few fields in request data(name + postcode, etc). and we can use it as id to make record unique
+            // Then we receive new request in other format , and we can create hash data over same datas and check it on db to see if it exists!
 
             // SAVE TO DB
+
+            //CreateOrUpdateDataAsync(buildingData);
         }
 
         public async Task<Building> GetDataByIdAsync(Guid Id)

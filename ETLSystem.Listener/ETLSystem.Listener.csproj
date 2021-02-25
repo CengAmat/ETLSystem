@@ -13,5 +13,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Workers\" />
+    <Folder Include="Properties\" />
   </ItemGroup>
 </Project>
