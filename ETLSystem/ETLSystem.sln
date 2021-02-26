@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETLSystem.Listener", "ETLSy
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETLSystem.Service", "ETLSystem.Service\ETLSystem.Service.csproj", "{40F0BA22-ECA9-4714-AA38-1F13D175DC71}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETLSystem.Test", "ETLSystem.Test\ETLSystem.Test.csproj", "{D1DEF440-08B8-49C2-9CB3-6EAC562D6442}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{40F0BA22-ECA9-4714-AA38-1F13D175DC71}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40F0BA22-ECA9-4714-AA38-1F13D175DC71}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40F0BA22-ECA9-4714-AA38-1F13D175DC71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1DEF440-08B8-49C2-9CB3-6EAC562D6442}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1DEF440-08B8-49C2-9CB3-6EAC562D6442}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1DEF440-08B8-49C2-9CB3-6EAC562D6442}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1DEF440-08B8-49C2-9CB3-6EAC562D6442}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

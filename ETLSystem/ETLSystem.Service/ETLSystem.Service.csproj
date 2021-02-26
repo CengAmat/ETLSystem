@@ -21,7 +21,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DataAcess\" />
-    <Folder Include="Interface\" />
-    <Folder Include="Manager\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Managers\" />
+    <Folder Include="Models\" />
   </ItemGroup>
 </Project>

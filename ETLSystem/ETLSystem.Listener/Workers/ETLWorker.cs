@@ -3,7 +3,9 @@ using System.Threading;
 using System.Threading.Tasks;
 using ETLSystem.Listener;
 using ETLSystem.Service;
+using ETLSystem.Service.DataAccess;
 using ETLSystem.Service.Interfaces;
+using ETLSystem.Service.Models;
 using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
 
@@ -42,11 +44,11 @@ namespace ETLSystem.Listener.Workers
         {
              try
              {
-                 await etlManager.ProcessAsync(message.Body);
+                 await etlManager.ProcessAsync(message);
              }
              catch (Exception ex)
              {
-
+                Console.WriteLine(ex.ToString());
              }
              return true;
         }

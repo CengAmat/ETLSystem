@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using ETLSystem.Service;
 
 namespace ETLSystem.Listener
 {
@@ -15,7 +14,6 @@ namespace ETLSystem.Listener
     public class Listener
     {
         private readonly IMessageHandler messageHandler;
-        private readonly string queueUrl;
 
         public Listener(IMessageHandler messageHandler)
         {
@@ -27,12 +25,14 @@ namespace ETLSystem.Listener
             Console.WriteLine($"From Execute : {DateTime.UtcNow}");
             while (!stoppingToken.IsCancellationRequested)
             {
-                var rmr = new ReceiveMessageRequest
+                try
                 {
-                    QueueUrl = queueUrl,
-                    MaxNumberOfMessages = 10,
-                    AttributeNames = new List<string> { "All" }
-                };
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                }
             }
         }
     }

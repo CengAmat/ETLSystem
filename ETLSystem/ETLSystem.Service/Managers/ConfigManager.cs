@@ -1,8 +1,8 @@
 ﻿using System;
-using ETLSystem.Service.Interface;
+using ETLSystem.Service.Interfaces;
 using Microsoft.Extensions.Configuration;
 
-namespace ETLSystem.Service.Manager
+namespace ETLSystem.Service.Managers
 {
     public class ConfigManager : IConfigManager
     {
@@ -17,6 +17,14 @@ namespace ETLSystem.Service.Manager
         {
             string key = $"ConnectionString:{dbName}";
             return configuration[key];
+        }
+
+        public bool TestConfig()
+        {
+            bool result = false;
+            string key = "TestConfig";
+            bool.TryParse(configuration[key], out result);
+            return result;
         }
     }
 }

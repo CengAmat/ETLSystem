@@ -21,10 +21,10 @@ namespace ETLSystem.Service.DataAccess
         {
             modelBuilder.Entity<Building>(entity =>
             {
-                entity.HasKey(e => e.Id)
+                entity.HasKey(e => e.Hash)
                     .HasName("Building_pkey");
 
-                entity.Property(e => e.Id).ValueGeneratedNever();
+                entity.Property(e => e.Hash).ValueGeneratedNever();
             });
 
             OnModelCreatingPartial(modelBuilder);
